@@ -1,0 +1,149 @@
+---
+layout: post
+title:  "Write UML Diagrams using PlantUML"
+tags: [UML, PlantUML, Graphviz]
+---
+
+## Why
+We often need to use UML tools in our daily work. There are plenty of commercial or open source UML tools - [List_UML_Tools](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools). The reason that I would like to introduce you this PlantUML + Gravizo:
+* More lightweight and Open Source
+* UML diagrams are created via Diagrams are defined using a simple and intuitive language.
+* Friendly to version control system.
+
+## What is [PlantUML](http://plantuml.com)
+![plantuml](https://raw.githubusercontent.com/lee/lee.github.io/master/res/images/plantumlsite.png)
+
+To be able to generate some diagrams, you must have Graphviz software installed on your machine.
+
+## What is [graphviz](https://www.graphviz.org)
+Graphviz is open source graph visualization software. Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. It has important applications in networking, bioinformatics,  software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
+
+## Prerequisites
+* plantuml
+* graphviz
+* VS Code + plantuml(plugin) + markdown (Optional)
+> Note: Make sure plantuml command line is available
+
+### How to Show/Generate Diagrams
+
+### PlantUML command line
+```bash
+⇒  plantuml test_flow.wsd
+```
+You will find a *png* file generated
+
+### UML diagram in VS Code with markdown
+<pre>
+```plantuml
+@startuml
+actor User
+participant "First Class" as A
+participant "Second Class" as B
+participant "Last Class" as C
+
+User -> A: DoWork
+activate A
+
+A -> B: Create Request
+activate B
+
+B -> C: DoWork
+activate C
+
+C --> B: WorkDone
+destroy C
+
+B --> A: Request Created
+deactivate B
+
+A --> User: Done
+deactivate A
+@enduml
+```
+</pre>
+> Press Ctrl + K, V then a preview will be shown
+
+### PlantUML Web Server
+[http://www.plantuml.com/plantuml/uml/](http://www.plantuml.com/plantuml/uml/)
+
+
+## Sequence Diagram
+```
+@startuml
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
+
+@enduml
+```
+![seq_diagram](http://www.plantuml.com/plantuml/png/LOz12eD034NtEKMWQoyW8euLeTkMqdKOin37Q6Fi-JjJ1MiM2U6_V7wgnKXj7GFCSVQ-dqaCdmihGEgObUXoRARNf0EGj_v3nkZmqhPrB02t8pSnLg60da8uaGtfyA0mJhBJTOv5WLuv0dT-hxmObkLn4rrhp3RRNR_-u0uwFgZ_nMtEAN9AAtmMeMBfufTV)
+
+## Class Diagram
+```
+@startuml
+class Car
+
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+
+@enduml
+```
+![class_diagram](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLd1EBEBYSYdAB4ijKj05yHIi5590t685EouGLqjN8JmZDJK7A9wHM9QgO08LrzLL24WjAixF0qhOAEINvnLpSJcavgK0ZGO0)
+
+## Gantt Diagram
+```
+@startgantt
+project starts the 2018/04/09
+saturday are closed
+sunday are closed
+2018/05/01 is closed
+2018/04/17 to 2018/04/19 is closed
+[Prototype design] lasts 14 days
+[Test prototype] lasts 4 days
+[Test prototype] starts at [Prototype design]'s end
+[Prototype design] is colored in Fuchsia/FireBrick 
+[Test prototype] is colored in GreenYellow/Green 
+@endgantt
+```
+![gantt diagram](http://www.plantuml.com/plantuml/png/TP0_JmCn3CNtV8gtCUOE7O9k5KDP6LXGnM1Th5uWYa-sJrM_FLNG8KfXYzyV_v9ipKdzGDKzp2hlF3gQPF29STlr3x4ROhS9HhveeXD86MCHunHigR-Khy9Tx7faknI7sD_31T_JvaTa_wpYugUPaTZoeRwXaBcX7t16MDY_i3dcDRNQ_xZh6yXnlVd6mFKlPBkF555Eo1MxPPmiKznbvKVDumUkEPUD9sMkhroA76Cx8spFgFQzdm00)
+
+## More
+
+PlantUML supports more type of diagrams than that I mentioned above, it also supports Math diagram in latex but needs additional software (AsciiMath or JLaTeXMath).
+
+
+```plantuml
+@startuml
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
+
+@enduml
+```
