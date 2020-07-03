@@ -198,7 +198,7 @@ img {
 }
 
 .navbar-custom .avatar-container .avatar-img-border {
-  width: 100%;
+  width: 80%;
   border-radius: 50%;
   margin-left: -50%;
   display: inline-block;
@@ -223,7 +223,7 @@ img {
     margin-top: -60px;
   }
   .navbar-custom .avatar-container .avatar-img-border {
-    width: 100%;
+    width: 80%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
     -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
@@ -579,7 +579,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .intro-header {
-    margin-top: 100px;
+    margin-top: 90px;
   }
   .intro-header.big-img {
     margin-top: 91px;
