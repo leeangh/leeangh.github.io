@@ -91,7 +91,7 @@ The annotation `@LoadBalanced` is used to mark a RestTemplate bean to be configu
 
 ## Multiple Services for Load Balance
 
-We start three instances of the same service at three different ports, look at the [source code](https://github.com/lee/spring-cloud-eureka-sample/tree/master/eureka-service-multiple).
+We start three instances of the same service at three different ports, look at the [source code](https://github.com/leeangh/spring-cloud-eureka-sample/tree/master/eureka-service-multiple).
 
 ![2-servers-3-services]({{site.baseurl}}/res/images/crash-course-eureka/2_server_3_services.png)
 

@@ -11,7 +11,7 @@ We often need to use UML tools in our daily work. There are plenty of commercial
 * Friendly to version control system.
 
 ## What is [PlantUML](http://plantuml.com)
-![plantuml](https://raw.githubusercontent.com/lee/lee.github.io/master/res/images/plantumlsite.png)
+![plantuml](https://raw.githubusercontent.com/leeangh/leeangh.github.io/master/res/images/plantumlsite.png)
 
 To be able to generate some diagrams, you must have Graphviz software installed on your machine.
 

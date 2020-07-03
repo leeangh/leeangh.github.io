@@ -149,7 +149,7 @@ public class FeignConsumerApplication {
 
 ### Binding Services
 
-Create interface for accessing the Eureka-Service which we have setup in [Crash Course - Spring Cloud Netflix Eureka - Part 2/3](https://lee.github.io/2018-08-16-Spring-Cloud-Eureka-Start-2-3/).
+Create interface for accessing the Eureka-Service which we have setup in [Crash Course - Spring Cloud Netflix Eureka - Part 2/3](https://leeangh.github.io/2018-08-16-Spring-Cloud-Eureka-Start-2-3/).
 
 `GreetingService.java`
 
@@ -216,4 +216,4 @@ Results when service is available:
 We shutdown the service instances, we expect the fallback handling shall works:
 > Eureka-service is not available
 
-Checkout the [Source](https://github.com/lee/spring-cloud-eureka-sample/tree/master/feign-consumer)
+Checkout the [Source](https://github.com/leeangh/spring-cloud-eureka-sample/tree/master/feign-consumer)

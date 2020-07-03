@@ -76,4 +76,4 @@ Hello haha! I'm service from port : 10072
 ...
 ```
 
-Check out the [source](https://github.com/lee/spring-cloud-eureka-sample/tree/master/ribbon-app)
+Check out the [source](https://github.com/leeangh/spring-cloud-eureka-sample/tree/master/ribbon-app)

@@ -88,7 +88,7 @@ mvn spring-boot:run
 
 Open the web browser, test the web URL - http://eureka-web:8080/sayHelo/Tracy.
 
-![Access Service](https://raw.githubusercontent.com/lee/lee.github.io/master/res/images/crash-course-eureka/access-service-from-web-client.png)
+![Access Service](https://raw.githubusercontent.com/leeangh/leeangh.github.io/master/res/images/crash-course-eureka/access-service-from-web-client.png)
 
 ### 5. High Availability - How?
 
@@ -98,11 +98,11 @@ I have mentioned the HA cluster at the first part, now I will show you a simple 
   
   You can see the peer1 is <font color='red'>DOWN(1)</font> in the peer2's status page:
 
-  ![peer2-with-closed-peer1](https://raw.githubusercontent.com/lee/lee.github.io/master/res/images/crash-course-eureka/peer2-with-closed-peer1.png)
+  ![peer2-with-closed-peer1](https://raw.githubusercontent.com/leeangh/leeangh.github.io/master/res/images/crash-course-eureka/peer2-with-closed-peer1.png)
 
 * Open the web browser, test againg on - http://eureka-web:8080/sayHelo/Tracy
   
-  ![Access Service](https://raw.githubusercontent.com/lee/lee.github.io/master/res/images/crash-course-eureka/access-service-from-web-client.png)
+  ![Access Service](https://raw.githubusercontent.com/leeangh/leeangh.github.io/master/res/images/crash-course-eureka/access-service-from-web-client.png)
 
 This is why we call it 'High Availability', even only one single server is up then the whole system is still available. 
 
@@ -110,4 +110,4 @@ We can see that I have stoped the server peer1, but the consumer is still able t
 
 OK, this is the end of this Crash Course. There might some mistakes through these three posts becuase I'm also fresh to the Spring Cloud. But I hope it can help you to get a overview, and welcome your comments.
 
-Checkout the source code of the demo [projects](https://github.com/lee/spring-cloud-eureka-sample).
+Checkout the source code of the demo [projects](https://github.com/leeangh/spring-cloud-eureka-sample).
